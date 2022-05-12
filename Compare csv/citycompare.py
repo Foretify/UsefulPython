@@ -6,8 +6,8 @@ import pandas as pd
 
 #Input the list of cities
 #filename = 'filename'
-american_cities = 'cities.csv'
-covered_cities = 'covered_cities.csv'
+american_cities = 'USCities.csv'
+covered_cities = 'CoveredCities.csv'
 
 
 ##Functions
@@ -32,15 +32,9 @@ american_cities_df = pd.read_csv(american_cities_path)
 #print("The csv that is being read into AGOL is: " + american_cities_path)
 #print(american_cities_df)
 #
-covered_cities_df = pd.read_csv(covered_cities_path)
+#covered_cities_df = pd.read_csv(covered_cities_path)
 #print("The csv that is being read into AGOL is: " + covered_cities_path)
 #print(covered_cities_df)
 
-cities = []
-covered = []
 for index, row in american_cities_df.iterrows():
-    city = row["City"]
     print (row["City"])
-    for index, row in covered_cities_df.iterrows():
-        covered_city = row["City"]
-        covered.append(covered_city)

@@ -1,0 +1,336 @@
+department, state
+Montgomery Police, Alabama
+Chino Valley Police, Arizona
+El Mirage Police, Arizona
+Glendale Police, Arizona
+Prescott Police, Arizona
+Yavapai County Sheriff, Arizona
+Texarkana AR Police, Arkansas
+Loveland Police, Colorado
+Darien Police, Connecticut
+New Britain Police, Connecticut
+Stamford Police, Connecticut
+Delaware State Police, Delaware
+Dover Police, Delaware 
+Milford Police, Delaware
+New Castle County Police, Delaware
+Newark Police, Delaware
+Smyrna Police, Delaware
+University of Delaware Police, Delaware
+Wilmington Police, Delaware
+Bay County Sheriff, Florida
+Broward County Sheriff, Florida
+Charlotte County Sheriff, Florida
+Coconut Creek Police, Florida
+Coral Gables Police, Florida
+Daytona Beach Police, Florida
+DeLand Police, Police
+Doral Police, Police
+Edgewater Police, Florida
+Fort Myers Police, Florida
+Hernando County Sheriff, Florida
+Holly Hill Police, Florida
+Hollywood Police, Florida
+Indian River County Sheriff, Florida
+Jacksonville Sheriff, Florida
+Leon County Sheriff, Florida
+Manatee County Sheriff, Florida
+Marianna Police, Florida
+Miami Police, Florida
+Miami-Dade Police, Florida
+New Smyrna Beach Police, Florida
+Ocala Police, Florida
+Orange City Police, Florida
+Ormond Beach Police, Florida
+Palm Beach County Sheriff, Florida
+Panama City Beach Police, Florida
+Pinecrest Police, Florida
+Port Orange Police, Florida
+Sarasota County Sheriff, Florida
+Sarasota Police, Florida
+South Daytona Police, Florida
+Volusia County Beach Patrol, Florida
+Volusia County Sheriff, Florida
+Butts County Sheriff, Georgia
+Clarkston Police, Georgia
+Conyers Police, Georgia
+DeKalb County Police, Georgia
+Doraville Police, Georgia
+Gwinnett County Police, Georgia
+Rome Police, Georgia
+Honolulu Police, Hawaii
+Bonneville County Sheriff, Idaho
+Idaho Falls Police, Idaho
+Bartonville Police, Illinois
+Broadview Police, Illinois
+Champaign Police, Illinois
+Peoria County Sheriff, Illinois
+Peoria Police, Illinois
+Rockford Police, Illinois
+Wheeling Police, Illinois
+Winnebago County Sheriff, Illinois
+Charlestown Police, Indiana
+Altoona Police, Iowa
+Carter Lake Police, Iowa
+Clive Police, Iowa
+Council Bluffs Police, Iowa
+Des Moines Police, Iowa
+Norwalk Police, Iowa
+Pottawattamie County Sheriff, Iowa
+Urbandale Police, Iowa
+Waukee Police, Iowa
+West Des Moines Police, Iowa
+Windsor Heights Police, Iowa
+Linn County Sheriff, Kansas
+Louisville Metro Police, Kentucky
+St. Matthews Police, Kentucky
+University of Louisville Police, Kentucky
+Broussard Police, Louisiana
+Carencro Police, Louisiana
+Duson Police, Louisiana
+Houma Police, Louisiana
+Iberia Parish Sheriff, Louisiana
+Lafayette Parish Sheriff, Louisiana
+Lafayette Police, Louisiana
+New Orleans Police, Louisiana
+Scott Police, Louisiana
+St. Charles Parish Sheriff, Louisiana
+St. James Parish Sheriff, Louisiana
+St. John Parish Sheriff, Louisiana
+Terrebonne Parish Sheriff, Louisiana
+Youngsville Police, Louisiana
+Presque Isle Police, Maine
+Framingham Police, Massachusetts
+Haverhill Police , Massachusetts
+Lowell Police , Massachusetts
+Whitman Police , Massachusetts
+Addison Township (Oakland Sheriff), Michigan
+Adrian Police
+Ann Arbor Police, Michigan
+Bay City Police, Michigan
+Big Rapids Dept. of Public Safety, Michigan
+Bloomfield Twp. Police, Michigan
+Brandon Township (Oakland Sheriff), Michigan
+Canton Police, Michigan
+Chelsea Police, Michigan
+Commerce Township (Oakland Sheriff), Michigan
+Dearborn Heights Police, Michigan
+Dearborn Police, Michigan
+East Lansing Police, Michigan
+Eastpointe Police, Michigan
+Eaton County Sheriff, Michigan
+Farmington Dept. of Public Safety, Michigan
+Farmington Hills Police, Michigan
+Fenton Police, Michigan
+Ferndale Police, Michigan
+Flint Police, Michigan
+Fraser Police, Michigan
+Garden City Police, Michigan
+Grand Blanc Police, Michigan
+Grand Blanc Township Police, Michigan
+Grand Rapids Police, Michigan
+Grand Traverse County Sheriff, Michigan
+Grosse Pointe Dept. of Public Safety, Michigan
+Grosse Pointe Park Dept. of Public Safety, Michigan
+Grosse Pointe Woods Dept. of Public Safety, Michigan
+Hamtramck Police, Michigan
+Harper Woods Dept. of Public Safety, Michigan
+Hazel Park Police, Michigan
+Highland Township (Oakland Sheriff), Michigan
+Huntington Woods Police, Michigan
+Independence TWP (Oakland Sheriff), Michigan
+Inkster Police, Michigan
+Kalamazoo County Sheriff, Michigan
+Kalamazoo Dept. of Public Safety, Michigan
+Lansing Police, Michigan
+Lenawee County SheriffLivonia Police, Michigan
+Lyon Township (Oakland Sheriff), Michigan
+Madison Heights Police, Michigan
+Madison Township Police, Michigan
+Melvindale Police, Michigan
+Meridian Police, Michigan
+Detriot Metro Police, Michigan
+Milan Police, Michigan
+Milford Police, Michigan
+Northfield Twp. Police, Michigan
+Northville Police, Michigan
+Northville Township Police, Michigan
+Novi Police, Michigan
+Oakland County Sheriff, Michigan
+Oakland Township (Oakland Sheriff), Michigan
+Orion Township (Oakland Sheriff), Michigan
+Oxford Township (Oakland Sheriff), Michigan
+Pittsfield Twp. Police, Michigan
+Plymouth Police, Michigan
+Plymouth Twp. Police, Michigan
+Pontiac (Oakland Sheriff), Michigan
+Port Huron Police Department, Michigan
+Potterville Police, Michigan
+Redford Police, Michigan
+Rochester Hills (Oakland Sheriff), Michigan
+Romulus Police, Michigan
+Roseville Police, Michigan
+Royal Oak Police, Michigan
+Saginaw Police, Michigan
+Saline Police, Michigan
+Shelby Township Police, Michigan
+South Lyon Police, Michigan
+Southfield Police, Michigan
+Springfield (Oakland Sheriff), Michigan
+Sumpter Twp. Police, Michigan
+Taylor Police, Michigan
+Tecumseh Police, Michigan
+Traverse City Police, Michigan
+Trenton Police, Michigan
+Troy Police, Michigan
+Van Buren Twp. Police, Michigan
+Village of Clarkston (Oakland Sheriff), Michigan
+Walled Lake Police, Michigan
+Washtenaw County Sheriff, Michigan
+Waterford Twp. Police, Michigan
+St Louis Park Police, Minnesota
+Biloxi Police, Mississippi
+Gulfport Police , Mississippi
+Cape Girardeau County Sheriff, Missouri
+Cape Girardeau Police, Missouri
+Jackson Police, Missouri
+Billings Police, Montana
+Bozeman Police , Montana
+Flathead County Sheriff, Montana
+Great Falls Police, Montana
+Douglas County Sheriff, Nebraska
+Grand Island Police, Nebraska
+Hastings Police, Nebraska
+Lincoln Police, Nebraska
+Omaha Police, Nebraska
+Carson City Sheriff, Nevada
+Las Vegas Metro Police, Nevada
+North Las Vegas Police, Nevada
+Manchester Police, New Hampshire
+Nashua Police, New Hampshire
+Portsmouth Police, New Hampshire
+Atlantic City Police, New Jersey
+Trenton Police, New Jersey
+Albuquerque Police, New Mexico
+Charlotte-Mecklenburg Police, North Carolina
+Emerald Isle Police, North Carolina
+Goldsboro Police, North Carolina
+Greensboro Police, North Carolina
+Henderson County Sheriff, North Carolina
+High Point Police, North Carolina
+Huntersville Police, North Carolina
+Raleigh Police, North Carolina
+UNCG Police, North Carolina
+Winston-Salem Police, North Carolina
+Austintown Police, Ohio
+Grove City Police, Ohio
+Pickerington Police, Ohio
+Willoughby Hills Police, Ohio
+Grants Pass Dept. of Public Safety, Oregon
+Medford Police, Oregon
+Amity Township Police, Pennsylvania
+Bally Police, Pennsylvania
+Berks County (District Attorney), Pennsylvania
+Berks-Lehigh Regional Police, Pennsylvania
+Bern Township Police, Pennsylvania
+Bernville Police, Pennsylvania
+Bethlehem Township Police, Pennsylvania
+Birdsboro Police, Pennsylvania
+Boyertown Police, Pennsylvania
+Brecknock Township Police, Pennsylvania
+Bristol Township Police, Pennsylvania
+Caernarvon Township Police, Pennsylvania
+Castle Shannon Police, Pennsylvania
+Catasauqua Police, Pennsylvania
+Central Berks Regional Police, Pennsylvania
+Cumru Township Police, Pennsylvania
+Douglass Township Police, Pennsylvania
+Exeter Township Police, Pennsylvania
+Fleetwood Police, Pennsylvania
+Hamburg Police, Pennsylvania
+Heidelberg Township Police, Pennsylvania
+Kutztown Police, Pennsylvania
+Laureldale Police, Pennsylvania
+Lower Heidelberg Township Police, Pennsylvania
+Mohnton Police, Pennsylvania
+Muhlenberg Township Police, Pennsylvania
+Norristown Police, Pennsylvania
+Northern Berks Regional Police, Pennsylvania
+Oley Township Police, Pennsylvania
+Penn State - Berks Police, Pennsylvania
+Pottstown Police, Pennsylvania
+Reading Police, Pennsylvania
+Robeson Township Police, Pennsylvania
+Salisbury Twp. Police, Pennsylvania
+Shillington Police, Pennsylvania
+Sinking Spring Police, Pennsylvania
+South Heidelberg Township, Pennsylvania
+South Whitehall Township Police, Pennsylvania
+Spring Township Police, Pennsylvania
+Tilden Township Police, Pennsylvania
+Tulpehocken Township Police, Pennsylvania
+West Reading Police, Pennsylvania
+Western Berks Regional Police, Pennsylvania
+Wyomissing Police, Pennsylvania
+Pawtucket Police Department, Rhode Island
+Providence Police, Rhode Island
+Fort Mill Police, South Carolina
+Lancaster County Sheriff, South Carolina
+North Augusta Police, South Carolina
+Oconee County Sheriff, South Carolina
+Rock Hill Police, South Carlonia
+Madison Police Department, South Dakota
+Sanborn County Sheriff, South Dakota
+Sioux Falls Police, South Dakota
+Ashland City Police, Tennessee
+Brentwood Police, Tennessee
+Bristol Police, Tennessee
+Clarksville Police, Tennessee
+Columbia Police, Tennessee
+Johnson City Police, Tennessee
+Morristown Police, Tennessee
+Murfreesboro Police, Tennessee
+Nashville Police, Tennessee
+Washington County Sheriff, Tennessee
+Bedford Police, Texas
+Cedar Hill Police, Texas
+College Station Police, Texas
+Desoto Police, Texas
+Duncanville Police, Texas
+Fort Worth Police, Texas
+Kerrville Police, Texas
+Mesquite Police, Texas
+Midland Police, Texas
+Richmond Police, Texas
+Texarkana TX Police, Texas
+Weatherford Police, Texas
+Wichita Falls Police, Texas
+Ogden Police, Utah
+Albemarle County Police, Virginia
+Blacksburg Police, Virginia
+Charlottesville Police, Virginia
+Chesapeake Police, Virginia
+Christiansburg Police, Virginia
+Norfolk Police, Virginia
+Old Dominion University Police, Virginia
+Roanoke Police, Virginia
+Spotsylvania County Sheriff, Virginia
+Stafford County Sheriff, Virginia
+Staunton Police, Virginia
+Vinton Police, Virginia
+Bellevue Police, Washington
+Bothell Police, Washington
+Duvall Police, Washington
+Kirkland Police, Washington
+Mercer Island Police, Washington
+Milton Police, Washington
+Grant County Sheriff , Wisconsin
+Oneida Police, Wisconsin
+Oshkosh Police, Wisconsin
+
+
+
+[{"Name":"Alabama","ID":1},{"Name":"Arizona","ID":3},{"Name":"Arkansas","ID":4},{"Name":"California","ID":5},{"Name":"Colorado","ID":6},{"Name":"Connecticut","ID":7},{"Name":"Delaware","ID":8},{"Name":"Florida","ID":9},{"Name":"Georgia","ID":10},{"Name":"Hawaii","ID":11},{"Name":"Idaho","ID":12},{"Name":"Illinois","ID":13},{"Name":"Indiana","ID":14},{"Name":"Iowa","ID":15},{"Name":"Kansas","ID":16},{"Name":"Kentucky","ID":17},{"Name":"Louisiana","ID":18},{"Name":"Maine","ID":19},{"Name":"Massachusetts","ID":21},{"Name":"Michigan","ID":22},{"Name":"Minnesota","ID":23},{"Name":"Mississippi","ID":24},{"Name":"Missouri","ID":25},{"Name":"Montana","ID":26},{"Name":"Nebraska","ID":27},{"Name":"Nevada","ID":28},{"Name":"New Hampshire","ID":29},{"Name":"New Jersey","ID":30},{"Name":"New Mexico","ID":31},{"Name":"North Carolina","ID":33},{"Name":"Ohio","ID":35},{"Name":"Oregon","ID":37},{"Name":"Pennsylvania","ID":38},{"Name":"Rhode Island","ID":39},{"Name":"South Carolina","ID":40},{"Name":"South Dakota","ID":41},{"Name":"Tennessee","ID":42},{"Name":"Texas","ID":43},{"Name":"Utah","ID":44},{"Name":"Virginia","ID":46},{"Name":"Washington","ID":47},{"Name":"Wisconsin","ID":49}]
+
+
+

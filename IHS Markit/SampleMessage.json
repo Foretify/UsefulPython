@@ -1,0 +1,147 @@
+{
+    "layers": [{
+        "name": "Site_Locations_Latest_Risk",
+        "displayField": "",
+        "description": "AttributeJoin",
+        "adminLayerInfo": {
+            "viewLayerDefinition": {
+                "table": {
+                    "name": "Assets_Market_Explorer_View__ccdf4a6c386a44acaf9fbe7c74d81e08_1614722368641_target",
+                    "sourceServiceName": "Assets_Market_Explorer_View__ccdf4a6c386a44acaf9fbe7c74d81e08",
+                    "sourceLayerId": 0,
+                    "sourceLayerFields": [{
+                        "name": "Current_Annual_Sales",
+                        "alias": "Current Annual Sales",
+                        "source": "Current_Annual_Sales"
+                    }, {
+                        "name": "Longitude",
+                        "alias": "Longitude",
+                        "source": "Longitude"
+                    }, {
+                        "name": "Latitude",
+                        "alias": "Latitude",
+                        "source": "Latitude"
+                    }, {
+                        "name": "Address",
+                        "alias": "Address",
+                        "source": "Address"
+                    }, {
+                        "name": "City",
+                        "alias": "City",
+                        "source": "City"
+                    }, {
+                        "name": "Manager_Name",
+                        "alias": "Manager Name",
+                        "source": "Manager_Name"
+                    }, {
+                        "name": "State",
+                        "alias": "State",
+                        "source": "State"
+                    }, {
+                        "name": "Asset_Name",
+                        "alias": "Asset Name",
+                        "source": "Asset_Name"
+                    }, {
+                        "name": "Manager_Email",
+                        "alias": "Manager Email",
+                        "source": "Manager_Email"
+                    }, {
+                        "name": "Manager_Phone_Number",
+                        "alias": "Manager Phone Number",
+                        "source": "Manager_Phone_Number"
+                    }, {
+                        "name": "Average_Daily_Sales",
+                        "alias": "Average Daily Sales",
+                        "source": "Average_Daily_Sales"
+                    }, {
+                        "name": "Lease_Expiration_Date",
+                        "alias": "Lease Expiration Date",
+                        "source": "Lease_Expiration_Date"
+                    }, {
+                        "name": "R12_Sales",
+                        "alias": "Rolling 12 Month Sales",
+                        "source": "R12_Sales"
+                    }, {
+                        "name": "Region_Name",
+                        "alias": "Region",
+                        "source": "Region_Name"
+                    }, {
+                        "name": "SubRegion_Name",
+                        "alias": "Sub-Region",
+                        "source": "SubRegion_Name"
+                    }, {
+                        "name": "Asset_Type",
+                        "alias": "Asset Type",
+                        "source": "Asset_Type"
+                    }, {
+                        "name": "Postal_Code",
+                        "alias": "Postal Code",
+                        "source": "Postal_Code"
+                    }, {
+                        "name": "Country",
+                        "alias": "Country",
+                        "source": "Country"
+                    }, {
+                        "name": "Asset_ID",
+                        "alias": "Asset ID",
+                        "source": "Asset_ID"
+                    }],
+                    "relatedTables": [{
+                        "name": "RiskScore_1614722368641_join",
+                        "sourceServiceName": "RiskScore",
+                        "sourceLayerId": 0,
+                        "sourceLayerFields": [{
+                            "name": "CountryIso2",
+                            "alias": "CountryIso2",
+                            "source": "CountryIso2"
+                        }, {
+                            "name": "Asset_ID_1614722368641",
+                            "alias": "Asset_ID",
+                            "source": "Asset_ID"
+                        }, {
+                            "name": "Location_Longitude",
+                            "alias": "Location_Longitude",
+                            "source": "Location_Longitude"
+                        }, {
+                            "name": "Location_Latitude",
+                            "alias": "Location_Latitude",
+                            "source": "Location_Latitude"
+                        }, {
+                            "name": "Risk_Combined",
+                            "alias": "Risk_Combined",
+                            "source": "Risk_Combined"
+                        }, {
+                            "name": "Risk_Terrorism",
+                            "alias": "Risk_Terrorism",
+                            "source": "Risk_Terrorism"
+                        }, {
+                            "name": "Risk_CivilUnrest",
+                            "alias": "Risk_CivilUnrest",
+                            "source": "Risk_CivilUnrest"
+                        }, {
+                            "name": "Risk_War",
+                            "alias": "Risk_War",
+                            "source": "Risk_War"
+                        }, {
+                            "name": "Risk_Score_Date",
+                            "alias": "Risk_Score_Date",
+                            "source": "Risk_Score_Date"                            
+                        }],
+                        "type": "INNER",
+                        "parentKeyFields": ["Asset_ID"],
+                        "keyFields": ["Asset_ID"],
+                        "topFilter": {
+                            "groupByFields": "Asset_ID",
+                            "orderByFields": "Risk_Score_Date DESC",
+                            "topCount": 1
+                        }
+                    }],
+                    "materialized": false
+                }
+            },
+            "geometryField": {
+                "name": "Assets_Market_Explorer_View__ccdf4a6c386a44acaf9fbe7c74d81e08_1614722368641_target.Shape"
+            }
+        }
+    }]
+}
