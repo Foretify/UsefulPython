@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "esri system health check"
+version = "1.0.0"
+description = "description of esri system health check"
+authors = ["rebeccaej26 <rebecca.todd@foretify.ai>"]
+license = "apache-2.0"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+arcgis = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
