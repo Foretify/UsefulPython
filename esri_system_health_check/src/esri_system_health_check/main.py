@@ -37,6 +37,30 @@ def main():
     # 3. Can we connect to the web adaptors for portal and server
     # 4. We need to understand the user type and permissions of the user
     # 5. We need to be able to create a folder and delete a folder in the users content
+
+        # create folder:
+    me = gis.users.me
+    user_folders = (me.folders)    
+    folder_name = config.get('ArcGIS Online Test Folder', 'folder')
+    folder_list = [i['title'] for i in user_folders]
+    if folder_name not in folder_list:
+        gis.content.create_folder(folder_name)
+        print(f'{folder_name} was created.')
+    elif folder_name in folder_list:
+        print(f"The folder: {folder_name} already exists and was not created.")
+
+        # delete folder:
+    me = gis.users.me
+    user_folders = (me.folders)    
+    folder_name = config.get('ArcGIS Online Test Folder', 'folder')
+    folder_list = [i['title'] for i in user_folders]
+    if folder_name in folder_list:
+        gis.content.delete_folder(folder_name)
+        print(f'The folder {folder_name} was deleted.')
+    elif folder_name not in folder_list:
+        print(f'The folder {folder_name} does not exist.')
+
+
     # 6. We need to be able to publish a shapefile as a hosted feature service
     # 7. We need to be able to publish an excel as a hosted feature service
     # 8. We need to be able to pull down these files and edit the content and push back our edits
