@@ -44,6 +44,7 @@ def main():
     folder_name = config.get('ArcGIS Online Test Folder', 'folder')
     folder_list = [i['title'] for i in user_folders]
     if folder_name not in folder_list:
+        print(f"There is no folder named:  {folder_name}; it will now be created. ")
         gis.content.create_folder(folder_name)
         print(f'{folder_name} was created.')
     elif folder_name in folder_list:
@@ -55,17 +56,34 @@ def main():
     folder_name = config.get('ArcGIS Online Test Folder', 'folder')
     folder_list = [i['title'] for i in user_folders]
     if folder_name in folder_list:
+        print(f"The test folder:  {folder_name} exists and will now be deleted")
         gis.content.delete_folder(folder_name)
-        print(f'The folder {folder_name} was deleted.')
+        print(f'The folder:  {folder_name} was deleted.')
     elif folder_name not in folder_list:
-        print(f'The folder {folder_name} does not exist.')
+        print(f'The folder:  {folder_name} does not exist.')
 
 
     # 6. We need to be able to publish a shapefile as a hosted feature service
+
+
     # 7. We need to be able to publish an excel as a hosted feature service
     # 8. We need to be able to pull down these files and edit the content and push back our edits
     # 9. We need to be able to run a geometry query on this data and produce a new layer in the enterprise based on this query
     # 10. We need to be able to create new users
+    # let us create a built-in account with username: demo_user1 with org_user privilege
+    demo_user1 = gis.users.create(username = 'demo_user1',
+                                password = '0286eb9ac01f',
+                                firstname = 'demo',
+                                lastname = 'user',
+                                email = 'python@esri.com',
+                                description = 'Demonstrating how to create users using ArcGIS Python API',
+                                role = 'org_user',
+                                level = 2,
+                                user_type = 'creatorUT',
+                                provider = 'arcgis')
+    demo_user1_role = demo_user1
+    print(type(demo_user1_role))
+    print(demo_user1_role)                                
     
 
 
