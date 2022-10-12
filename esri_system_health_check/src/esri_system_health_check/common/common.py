@@ -1,6 +1,7 @@
 import os
 import sys
 import logging
+import requests
 from arcgis.gis import GIS, Item
 from typing import Optional, Text
 from datetime import datetime, timedelta
@@ -216,6 +217,19 @@ class EqualsSpaceRemover:
     def write(self, what):
         self.output_file.write(what.replace(" = ", "=", 1))
 
+def check_connection(url:str) -> int:
+    '''
+    This is a function that will input a url and output a status code for that url. 
+    This was created to test the status of elements of the ArcGIS Enterprise due to issues with the system going down
+    Args: 
+    input: url
+    output: int status code
+    '''
+    print(f'The url that was entered is: {url}')
+    url_request = requests.get(url)
+    status_code = int(url_request.status_code)
+    return status_code
+
 
 # def create_folder_online():
     # me = gis.users.me
@@ -240,4 +254,3 @@ class EqualsSpaceRemover:
     # elif folder_name not in folder_list:
     #     print(f'The folder {folder_name} does not exist.')
 
-    

@@ -11,7 +11,24 @@ def main():
     print("Starting the process of checking the health of the Esri System\n")
     print(runner_start_time)
 
+    print("Reading details Configuration File")
+    
+    config_dir = common.get_config_path()
+    
+    config = common.load_configuration(config_dir)
+    print(f"configuration file location:\n{config_dir}")
+    
+    arcgis_org_url = config.get('ArcGIS Credentials', 'arcgis_org_url')
+    username = config.get('ArcGIS Credentials', 'username')
+    password = config.get('ArcGIS Credentials', 'password')
 
+
+    # 1. Are all the necessary items on line that need to be present
+    portal_status = common.check_connection(arcgis_org_url)
+    if portal_status == 200:
+        print('We have been able to connect to portal')
+    else:    
+        print("We have failed to connect to portal")
     # 1. Can we connect to the ArcGIS Portal or AGOL @topowright
 
         # Read Configuration File
@@ -19,16 +36,8 @@ def main():
         # run ie layers from AGOL and connection parameters
         # Create the config parser object to store all the connection information for AGOL
 
-    print("Reading details Configuration File")
-    
-    config_dir = common.get_config_path()
-    
-    config = common.load_configuration(config_dir)
-    print(f"configuration file location:\n{config_dir}")
+ 
     print("Querying Content from ArcGIS")
-    arcgis_org_url = config.get('ArcGIS Credentials', 'arcgis_org_url')
-    username = config.get('ArcGIS Credentials', 'username')
-    password = config.get('ArcGIS Credentials', 'password')
 
     gis = common.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
 
