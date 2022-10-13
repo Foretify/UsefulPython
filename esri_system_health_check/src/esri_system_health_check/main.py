@@ -22,6 +22,8 @@ def main():
     username = config.get('ArcGIS Credentials', 'username')
     password = config.get('ArcGIS Credentials', 'password')
 
+    print("1. Making sure we have connection to all parts of the ArcGIS enterprise:")
+
 
     # 1. Are all the necessary items on line that need to be present
     portal_status = common.check_connection(arcgis_org_url)
@@ -40,7 +42,6 @@ def main():
     print("Querying Content from ArcGIS")
 
     gis = common.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
-
 
     # 2. Can we connect to ArcGIS Server
     # 3. Can we connect to the web adaptors for portal and server
