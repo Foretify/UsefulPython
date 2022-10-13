@@ -230,27 +230,23 @@ def check_connection(url:str) -> int:
     status_code = int(url_request.status_code)
     return status_code
 
+def create_folder_in_ags(gis: str , folder_name: str) -> str:
+    me = gis.users.me
+    user_folders = (me.folders)    
+    folder_list = [i['title'] for i in user_folders]
+    if folder_name not in folder_list:
+        gis.content.create_folder(folder_name)
+        print(f'{folder_name} was created.')
+    elif folder_name in folder_list:
+        print(f"The folder: {folder_name} already exists and was not created.")
 
-# def create_folder_online():
-    # me = gis.users.me
-    # user_folders = (me.folders)    
-    # folder_name = config.get('ArcGIS Online Test Folder', 'folder')
-    # folder_list = [i['title'] for i in user_folders]
-    # if folder_name not in folder_list:
-    #     gis.content.create_folder(folder_name)
-    #     print(f'{folder_name} was created.')
-    # elif folder_name in folder_list:
-    #     print(f"The folder: {folder_name} already exists and was not created.")
-
-
-# def delete_folder_online():
-    # me = gis.users.me
-    # user_folders = (me.folders)    
-    # folder_name = config.get('ArcGIS Online Test Folder', 'folder')
-    # folder_list = [i['title'] for i in user_folders]
-    # if folder_name in folder_list:
-    #     gis.content.delete_folder(folder_name)
-    #     print(f'The folder {folder_name} was deleted.')
-    # elif folder_name not in folder_list:
-    #     print(f'The folder {folder_name} does not exist.')
+def delete_folder_in_args(gis: str, folder_name: str) -> str:
+    me = gis.users.me
+    user_folders = (me.folders)    
+    folder_list = [i['title'] for i in user_folders]
+    if folder_name in folder_list:
+        gis.content.delete_folder(folder_name)
+        print(f'The folder {folder_name} was deleted.')
+    elif folder_name not in folder_list:
+        print(f'The folder {folder_name} does not exist.')
 
