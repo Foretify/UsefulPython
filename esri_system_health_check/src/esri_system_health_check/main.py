@@ -4,7 +4,7 @@ import time
 import os
 import pandas as pd
 from datetime import date
-from common import common
+from common import common as cm
 from arcgis.gis import GIS
 from arcgis.features import GeoAccessor
 
@@ -25,9 +25,10 @@ def main():
 
     print("Reading details Configuration File")
     
-    config_dir = common.get_config_path()
+
+    config_dir = cm.get_config_path()
     
-    config = common.load_configuration(config_dir)
+    config = cm.load_configuration(config_dir)
     print(f"configuration file location:\n{config_dir}")
     print("Querying Content from ArcGIS")
     arcgis_org_url = config.get('ArcGIS Credentials', 'arcgis_org_url')
@@ -37,7 +38,7 @@ def main():
     csv_path = config.get('ArcGIS Online Test Folder', 'csv_path')
     layer_title = config.get('ArcGIS Online Test Folder', 'csv_layer')
 
-    gis = common.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
+    gis = cm.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
 
 
     # 2. Can we connect to ArcGIS Server
@@ -46,13 +47,15 @@ def main():
     # 5. We need to be able to create a folder and delete a folder in the users content
 
         # create folder:
-    common.create_folder_in_ags(gis, folder_name)
+    print("5. Creating a folder that will be deleted in step 6\n")
+    cm.create_folder_in_ags(gis, folder_name)
 
     # 7. We need to be able to publish an excel as a hosted feature service
-    common.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
+    print("6. Creating a layer in the hosted server from a csv that is stored locally\n")
+    cm.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
 
         # delete folder:
-    common.delete_folder_in_args(gis, folder_name)
+    cm.delete_folder_in_args(gis, folder_name)
 
 
     # 6. We need to be able to publish a shapefile as a hosted feature service
