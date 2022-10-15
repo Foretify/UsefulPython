@@ -6,6 +6,8 @@ from arcgis.gis import GIS, Item
 from typing import Optional, Text
 from datetime import datetime, timedelta
 from configparser import ConfigParser, RawConfigParser
+import pandas as pd
+from arcgis.features import GeoAccessor
 
 
 def connect(org_url: str, login_name: str, user_password: str, profile_name: Optional[str]=None):
@@ -231,6 +233,8 @@ def check_connection(url:str) -> int:
     return status_code
 
 def create_folder_in_ags(gis: str , folder_name: str) -> str:
+    """Creates a folder with a specified name in the ArcGIS Online organization if it does not already exist. If 
+    the folder with the specified name already exists, no folder is created."""
     me = gis.users.me
     user_folders = (me.folders)    
     folder_list = [i['title'] for i in user_folders]
@@ -241,6 +245,8 @@ def create_folder_in_ags(gis: str , folder_name: str) -> str:
         print(f"The folder: {folder_name} already exists and was not created.")
 
 def delete_folder_in_args(gis: str, folder_name: str) -> str:
+    """Deletes a specified folder in the ArcGIS Online organization. If the specified folder does not
+    exist, no folder is deleted."""
     me = gis.users.me
     user_folders = (me.folders)    
     folder_list = [i['title'] for i in user_folders]
@@ -250,3 +256,13 @@ def delete_folder_in_args(gis: str, folder_name: str) -> str:
     elif folder_name not in folder_list:
         print(f'The folder {folder_name} does not exist.')
 
+def create_layer_in_test_folder(gis: str, csv_path: str, folder_name: str, layer_title: str):
+    """Finds the path of the CSV containing test data that is saved in the root directory. Reads the
+    CSV into a DataFrame (df), converts the df to a spatial DataFrame(sdf), and publishes the sdf as
+    a feature layer in a specified folder created within the ArcGIS Organization.
+    """
+    x = os.path.dirname(__file__)
+    csv_file = os.path.abspath(os.path.join(x, os.pardir, csv_path))  
+    csv_df = pd.read_csv(csv_file)
+    csv_sdf = GeoAccessor.from_xy(csv_df, 'lng', 'lat')
+    csv_sdf.spatial.to_featurelayer(title=layer_title, folder=folder_name)

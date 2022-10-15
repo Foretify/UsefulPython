@@ -5,6 +5,10 @@ import os
 import pandas as pd
 from datetime import date
 from common import common
+from arcgis.gis import GIS
+from arcgis.features import GeoAccessor
+
+
 
 def main():
     runner_start_time = time.time()
@@ -30,6 +34,8 @@ def main():
     username = config.get('ArcGIS Credentials', 'username')
     password = config.get('ArcGIS Credentials', 'password')
     folder_name = config.get('ArcGIS Online Test Folder', 'folder')
+    csv_path = config.get('ArcGIS Online Test Folder', 'csv_path')
+    layer_title = config.get('ArcGIS Online Test Folder', 'csv_layer')
 
     gis = common.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
 
@@ -42,6 +48,9 @@ def main():
         # create folder:
     common.create_folder_in_ags(gis, folder_name)
 
+    # 7. We need to be able to publish an excel as a hosted feature service
+    common.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
+
         # delete folder:
     common.delete_folder_in_args(gis, folder_name)
 
@@ -50,7 +59,10 @@ def main():
 
     
 
-    # 7. We need to be able to publish an excel as a hosted feature service
+    
+
+
+
     # 8. We need to be able to pull down these files and edit the content and push back our edits
     # 9. We need to be able to run a geometry query on this data and produce a new layer in the enterprise based on this query
     # 10. We need to be able to create new users
