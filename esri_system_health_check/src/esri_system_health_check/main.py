@@ -9,8 +9,6 @@ from cProfile import run
 from common import common as cm
 from arcgis.features import GeoAccessor
 
-
-
 def main():
     runner_start_time = time.time()
     print("Starting the process of checking the status of the Esri System\n")
@@ -38,6 +36,7 @@ def main():
     folder_name = config.get('Test Folder', 'folder')
     csv_path = config.get('Test Folder', 'csv_path')
     layer_title = config.get('Test Folder', 'csv_layer')
+    sample_item = config.get('ArcGIS Items', 'test_item')
     
     print("Creating the GIS Object to connect to the instance of ArcGIS")
     print("##########################################################")
@@ -52,25 +51,36 @@ def main():
 
     # 2. Can we connect to ArcGIS Server
     # 3. Can we connect to the web adaptors for portal and server
-    # 4. We need to understand the user type and permissions of the user
+    
+
+
+    # 4. Pull a gis item into a dataframe and create a feature set from this item
+   
+    itm = sample_item
+    sample_itm = cm.get_gis_item(itm, gis)
+    sample_lyr = sample_itm.layers[0]
+    sample_fs = sample_lyr.query()
+    sample_df = sample_lyr.query(as_df=True)
+
     # 5. We need to be able to create a folder and delete a folder in the users content
 
-        # create folder:
+    
     print("##########################################################")
     print("5. Creating a folder that will be deleted in step 6\n")
     cm.create_folder_in_ags(gis, folder_name)
 
     print("##########################################################")
-    # 7. We need to be able to publish an excel as a hosted feature service
+    # 6. We need to be able to publish an excel as a hosted feature service
     print("##########################################################")
     print("6. Creating a layer in the hosted server from a csv that is stored locally\n")
     cm.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
+
 
     # delete folder:
     cm.delete_folder_in_args(gis, folder_name)
 
     print("##########################################################")
-    # 6. We need to be able to publish a shapefile as a hosted feature service
+    # 7. We need to be able to publish a shapefile as a hosted feature service
 
     
 
