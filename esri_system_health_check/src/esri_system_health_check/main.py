@@ -13,7 +13,7 @@ from arcgis.features import GeoAccessor
 def main():
     runner_start_time = time.time()
     print("Starting the process of checking the status of the Esri System\n")
-    print("Reading details Configuration File")
+    print(" - Reading details Configuration File")
     
     # 1. Can we connect to the ArcGIS Portal or AGOL 
 
@@ -25,11 +25,10 @@ def main():
     
     config = cm.load_configuration(config_dir)
     
-    print("Pulling information from the configureation file")
-    print("##########################################################")
-    
-    print(f"configuration file location:\n{config_dir}")
-    print("Querying Content from ArcGIS")
+    print(" - Pulling information from the Configuration file")
+      
+    print(f"   - configuration file location:\n{config_dir}")
+    print("    - Querying Content from ArcGIS")
     arcgis_org_url = config.get('ArcGIS Credentials', 'arcgis_org_url')
     username = config.get('ArcGIS Credentials', 'username')
     password = config.get('ArcGIS Credentials', 'password')
@@ -40,17 +39,17 @@ def main():
     
     layer_title = layer_title + str(random.randint(1,10000))
     sample_item = config.get('ArcGIS Items', 'test_item')
-
+    print("##########################################################\n")
 
     # 1.Creating the GIS Object to connect to the instance of ArcGIS
     print('1. Testing to connect to the ArcGIS Enterprise or AGOL ')
     
-    print("Creating the GIS Object to connect to the instance of ArcGIS")
+    print(" - Creating the GIS Object to connect to the instance of ArcGIS")
 
     gis = cm.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
     status = gis.properties.portalName
     
-    print(f"Completed connecting to a {status}")
+    print(f" - Completed connecting to a {status}")
     print("##########################################################\n")
 
     if status == 'ArcGIS Online': 
@@ -58,33 +57,40 @@ def main():
     
     # 2. Can we connect to ArcGIS Server
     print('2. Can we connect to ArcGIS Server')
-    
-
+    print(' - Here is the first thing we do. ')
+    print(' - Here is the next thing we do. ')
+    print(' - We completed doing the things for section 2. ')
     print("##########################################################\n")
+
+
     # 3. Can we connect to the web adaptors for portal and server
     print('3. Can we connect to the web adaptors for portal and server')
+    print(' - Here is the first thing we do. ')
+    print(' - Here is the next thing we do. ')
+    print(' - We completed doing the things for section 3. ')
+    print("##########################################################\n")
     
 
-    print("##########################################################\n")
     # 4. Pull a gis item into a dataframe and create a feature set from this item
     
     print("4. Pull a gis item into a dataframe and create a feature set from this item")
-    
-   
+    print(' - Pulling GIS item URL from Configuration file. ')
+       
     itm = sample_item
     sample_itm = cm.get_gis_item(itm, gis)
     sample_lyr = sample_itm.layers[0]
     sample_fs = sample_lyr.query()
     sample_df = sample_lyr.query(as_df=True)
-
-    
-
-    
+    print(' - Querying data from GIS item. ')
+    print(' - Writing data from GIS item into a dataframe. ')
+    print("Completed. ") 
     print("##########################################################\n")
+
+
     # 5. We need to be able to create a folder and delete a folder in the users content
     print("5. Creating a folder that will be deleted in step 6\n")
     cm.create_folder_in_ags(gis, folder_name)
-    print(f'Created a folder in the {status}')
+    print(f' - Created a folder in the {status}')
     print("##########################################################\n")
 
 
