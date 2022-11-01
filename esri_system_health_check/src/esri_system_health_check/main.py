@@ -24,8 +24,7 @@ def main():
     config_dir = cm.get_config_path()
     
     config = cm.load_configuration(config_dir)
-    print("##########################################################")
-    print('1. Testing to connect to the ArcGIS Enterprise ')
+    
     print("Pulling information from the configureation file")
     print("##########################################################")
     
@@ -42,26 +41,35 @@ def main():
     layer_title = layer_title + str(random.randint(1,10000))
     sample_item = config.get('ArcGIS Items', 'test_item')
 
+
+    # 1.Creating the GIS Object to connect to the instance of ArcGIS
+    print('1. Testing to connect to the ArcGIS Enterprise or AGOL ')
     
     print("Creating the GIS Object to connect to the instance of ArcGIS")
-    print("##########################################################")
 
     gis = cm.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
     status = gis.properties.portalName
-    print(f'The connected system is an: {status} ')
+    
+    print(f"Completed connecting to a {status}")
+    print("##########################################################\n")
 
     if status == 'ArcGIS Online': 
         print(f'We are skipping steps 2 and 3 due to the instance being {status}.')
     
-    print("##########################################################")
-
-
     # 2. Can we connect to ArcGIS Server
-    # 3. Can we connect to the web adaptors for portal and server
+    print('2. Can we connect to ArcGIS Server')
     
 
+    print("##########################################################\n")
+    # 3. Can we connect to the web adaptors for portal and server
+    print('3. Can we connect to the web adaptors for portal and server')
+    
 
+    print("##########################################################\n")
     # 4. Pull a gis item into a dataframe and create a feature set from this item
+    
+    print("4. Pull a gis item into a dataframe and create a feature set from this item")
+    
    
     itm = sample_item
     sample_itm = cm.get_gis_item(itm, gis)
@@ -69,13 +77,14 @@ def main():
     sample_fs = sample_lyr.query()
     sample_df = sample_lyr.query(as_df=True)
 
-    # 5. We need to be able to create a folder and delete a folder in the users content
+    
 
     
     print("##########################################################\n")
+    # 5. We need to be able to create a folder and delete a folder in the users content
     print("5. Creating a folder that will be deleted in step 6\n")
     cm.create_folder_in_ags(gis, folder_name)
-
+    print(f'Created a folder in the {status}')
     print("##########################################################\n")
 
 
