@@ -55,14 +55,15 @@ def main():
 
     if status == 'ArcGIS Online': 
         print(f'We are skipping steps 2 and 3 due to the instance being {status}.')
+    else:
     
-    # 2. Can we connect to ArcGIS Server
-    print('2. Can we connect to ArcGIS Server')
+        # 2. Can we connect to ArcGIS Server
+        print('2. Can we connect to ArcGIS Server')
     
 
-    print("##########################################################\n")
-    # 3. Can we connect to the web adaptors for portal and server
-    print('3. Can we connect to the web adaptors for portal and server')
+        print("##########################################################\n")
+        # 3. Can we connect to the web adaptors for portal and server
+        print('3. Can we connect to the web adaptors for portal and server')
     
 
     print("##########################################################\n")
