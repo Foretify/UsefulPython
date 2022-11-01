@@ -12,7 +12,7 @@ from arcgis.features import GeoAccessor
 
 def main():
     runner_start_time = time.time()
-    print("Starting the process of checking the status of the Esri System\n")
+    print(" \nStarting the process of checking the status of the Esri System")
     print(" - Reading details Configuration File")
     
     # 1. Can we connect to the ArcGIS Portal or AGOL 
@@ -25,10 +25,8 @@ def main():
     
     config = cm.load_configuration(config_dir)
     
-    print(" - Pulling information from the Configuration file")
-      
-    print(f"   - configuration file location:\n{config_dir}")
-    print("    - Querying Content from ArcGIS")
+    print(f" - Pulling information from the configuration file. Config file location:\n{config_dir} ")
+    print("  - Querying Content from ArcGIS\n")
     arcgis_org_url = config.get('ArcGIS Credentials', 'arcgis_org_url')
     username = config.get('ArcGIS Credentials', 'username')
     password = config.get('ArcGIS Credentials', 'password')
@@ -49,7 +47,7 @@ def main():
     gis = cm.connect(org_url=arcgis_org_url, login_name=username, user_password=password)
     status = gis.properties.portalName
     
-    print(f" - Completed connecting to a {status}")
+    print(f" - Completed connecting to a {status}\n")
     print("##########################################################\n")
 
     if status == 'ArcGIS Online': 

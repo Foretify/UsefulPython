@@ -23,7 +23,7 @@ def connect(org_url: str, login_name: str, user_password: str, profile_name: Opt
                                         the identified profile will be used to login to the specified GIS. Defaults to None.
     """
     if profile_name:
-        print(f'Attempting to connect with the credential profile, {profile_name}')
+        print(f' - Attempting to connect with the credential profile, {profile_name}')
         try:
             gis = GIS(profile=profile_name)
             print_profile_info() 
@@ -34,7 +34,7 @@ def connect(org_url: str, login_name: str, user_password: str, profile_name: Opt
             print(e, exc_info=True)
             return None
     else:
-        print('No profile specified menaing no profile was stored on the system.\nAttempting to connect using username and password for ArcGIS:\n')
+        print(' - No profile specified menaing no profile was stored on the system.\n - Attempting to connect using username and password for ArcGIS:\n')
         try:
             gis = GIS(url=org_url, username=login_name, password=user_password)
             print_profile_info(gis)
@@ -77,7 +77,7 @@ def print_profile_info(gis):
         '''
         Output print statement that displays gis properties
         '''
-        print("Successfully logged into '{}' via the user '{}'".format(
+        print(" - Successfully logged into '{}' via the user '{}'".format(
             gis.properties.portalHostname,
             gis.properties.user.username))
 
