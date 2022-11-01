@@ -4,6 +4,7 @@ import time
 import os
 import pandas as pd
 import random
+import requests
 from datetime import date
 from arcgis.gis import GIS
 from cProfile import run
@@ -41,6 +42,11 @@ def main():
     layer_title = layer_title + str(random.randint(1,10000))
     sample_item = config.get('ArcGIS Items', 'test_item')
 
+    ags_server = config.get('Machines', 'server')
+    ags_portal = config.get('Machines', 'portal')
+
+    
+
 
     # 1.Creating the GIS Object to connect to the instance of ArcGIS
     print('1. Testing to connect to the ArcGIS Enterprise or AGOL ')
@@ -53,12 +59,20 @@ def main():
     print(f"Completed connecting to a {status}")
     print("##########################################################\n")
 
+    
+
     if status == 'ArcGIS Online': 
         print(f'We are skipping steps 2 and 3 due to the instance being {status}.')
     else:
     
         # 2. Can we connect to ArcGIS Server
         print('2. Can we connect to ArcGIS Server')
+
+        server_status = requests.request(method='GET', url= ags_server)
+        print(f'We are able to connect to the {ags_server} machine with a code of:  {server_status}')
+
+        portal_status = requests.request(method='GET', url= ags_portal)
+        print(f'We are able to connect to the {ags_portal} machine with a code of:  {portal_status}')
     
 
         print("##########################################################\n")
