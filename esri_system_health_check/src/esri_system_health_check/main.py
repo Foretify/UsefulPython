@@ -3,6 +3,7 @@ import sys
 import time
 import os
 import pandas as pd
+import random
 from datetime import date
 from arcgis.gis import GIS
 from cProfile import run
@@ -34,9 +35,13 @@ def main():
     username = config.get('ArcGIS Credentials', 'username')
     password = config.get('ArcGIS Credentials', 'password')
     folder_name = config.get('Test Folder', 'folder')
+    folder_name = folder_name + str(random.randint(1,10000))
     csv_path = config.get('Test Folder', 'csv_path')
     layer_title = config.get('Test Folder', 'csv_layer')
+    
+    layer_title = layer_title + str(random.randint(1,10000))
     sample_item = config.get('ArcGIS Items', 'test_item')
+
     
     print("Creating the GIS Object to connect to the instance of ArcGIS")
     print("##########################################################")
@@ -47,6 +52,8 @@ def main():
 
     if status == 'ArcGIS Online': 
         print(f'We are skipping steps 2 and 3 due to the instance being {status}.')
+    
+    print("##########################################################")
 
 
     # 2. Can we connect to ArcGIS Server
@@ -65,36 +72,41 @@ def main():
     # 5. We need to be able to create a folder and delete a folder in the users content
 
     
-    print("##########################################################")
+    print("##########################################################\n")
     print("5. Creating a folder that will be deleted in step 6\n")
     cm.create_folder_in_ags(gis, folder_name)
 
-    print("##########################################################")
+    print("##########################################################\n")
+
+
     # 6. We need to be able to publish an excel as a hosted feature service
-    print("##########################################################")
+    print("##########################################################\n")
     print("6. Creating a layer in the hosted server from a csv that is stored locally\n")
     cm.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
+    print('Created a hosted feature layer from a csv')
+    print("##########################################################\n")
 
+    # 7. Cleaning up the test data by deleting the folder created
+    print('7. Cleaning up the test data by deleting the folder created')
 
-    # delete folder:
     cm.delete_folder_in_args(gis, folder_name)
+    print("##########################################################\n")
 
-    print("##########################################################")
+    print("##########################################################\n")
     # 7. We need to be able to publish a shapefile as a hosted feature service
+
+
+
+    print("##########################################################\n")
 
     
 
 
     # 8. We need to be able to pull down these files and edit the content and push back our edits
     print('Pulling a feature layer into a dataframe removing all the content and adding new content')
+    print("##########################################################\n")
 
-
-    # 9. We need to be able to run a geometry query on this data and produce a new layer in the enterprise based on this query
     
-    
-    # 10. We need to be able to create new users
-    
-
     print("Completed all necessary steps")
 
 # Processing Steps to check the health of the system
