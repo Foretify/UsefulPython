@@ -40,7 +40,7 @@ def main():
     print("##########################################################\n")
 
     # 1.Creating the GIS Object to connect to the instance of ArcGIS
-    print('1. Testing to connect to the ArcGIS Enterprise or AGOL ')
+    print('1. Testing the connection to ArcGIS Enterprise or AGOL ')
     
     print(" - Creating the GIS Object to connect to the instance of ArcGIS")
 
@@ -57,7 +57,7 @@ def main():
     print('2. Can we connect to ArcGIS Server')
     print(' - Here is the first thing we do. ')
     print(' - Here is the next thing we do. ')
-    print(' - We completed doing the things for section 2. ')
+    print(' - We completed doing the things for section 2. \n')
     print("##########################################################\n")
 
 
@@ -65,13 +65,13 @@ def main():
     print('3. Can we connect to the web adaptors for portal and server')
     print(' - Here is the first thing we do. ')
     print(' - Here is the next thing we do. ')
-    print(' - We completed doing the things for section 3. ')
+    print(' - We completed doing the things for section 3. \n')
     print("##########################################################\n")
     
 
     # 4. Pull a gis item into a dataframe and create a feature set from this item
     
-    print("4. Pull a gis item into a dataframe and create a feature set from this item")
+    print("4. Testing pulling a GIS item into a DataFrame and creating a feature set from this item")
     print(' - Pulling GIS item URL from Configuration file. ')
        
     itm = sample_item
@@ -80,47 +80,46 @@ def main():
     sample_fs = sample_lyr.query()
     sample_df = sample_lyr.query(as_df=True)
     print(' - Querying data from GIS item. ')
-    print(' - Writing data from GIS item into a dataframe. ')
-    print("Completed. ") 
+    print(f' - Successfully wrote data from GIS item: {itm} into a dataframe. \n')
     print("##########################################################\n")
 
 
     # 5. We need to be able to create a folder and delete a folder in the users content
-    print("5. Creating a folder that will be deleted in step 6\n")
+    print("5. Testing the ability to create a folder\n")
     cm.create_folder_in_ags(gis, folder_name)
-    print(f' - Created a folder in the {status}')
+    print(f' - Successfully created a folder in {status}')
+    print(f' - {folder_name} will be deleted in a subsequent test. \n')
     print("##########################################################\n")
 
 
     # 6. We need to be able to publish an excel as a hosted feature service
-    print("##########################################################\n")
-    print("6. Creating a layer in the hosted server from a csv that is stored locally\n")
+    print("6. Testing the ability to create a layer in the hosted server from a csv that is stored locally\n")
     cm.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
-    print('Created a hosted feature layer from a csv')
+    print(f' - Successfully created a hosted feature layer from a csv in {status}\n')
     print("##########################################################\n")
 
     # 7. Cleaning up the test data by deleting the folder created
-    print('7. Cleaning up the test data by deleting the folder created')
-
+    print('7. Cleaning up the test data by deleting the folder created in step 5')
     cm.delete_folder_in_args(gis, folder_name)
+    print(f' - Successfully deleted the test folder: {folder_name} created in {status}\n')
     print("##########################################################\n")
 
+    # 8. We need to be able to publish a shapefile as a hosted feature service
+    print(f'8. Testing the ability to publish a shapefile as a hosted feature service')
+    print(' - Here is the first thing we do. ')
+    print(' - Here is the next thing we do. ')
+    print(' - We completed doing the things for section 8. \n')
     print("##########################################################\n")
-    # 7. We need to be able to publish a shapefile as a hosted feature service
 
 
-
+    # 9. We need to be able to pull down these files and edit the content and push back our edits
+    print('9. Testing the ability to pull a feature layer into a DataFrame, remove all the content, and add new content.')
+    print(' - Here is the first thing we do. ')
+    print(' - Here is the next thing we do. ')
+    print(' - We completed doing the things for section 9. \n')
     print("##########################################################\n")
-
     
-
-
-    # 8. We need to be able to pull down these files and edit the content and push back our edits
-    print('Pulling a feature layer into a dataframe removing all the content and adding new content')
-    print("##########################################################\n")
-
-    
-    print("Completed all necessary steps")
+    print("Completed all necessary steps. ")
 
 # Processing Steps to check the health of the system
 if __name__ == "__main__":

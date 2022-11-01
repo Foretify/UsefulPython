@@ -61,7 +61,7 @@ def get_gis_item(item_id: str, gis: GIS) -> Item:
         Returns:
             arcgis.gis.Item: Item content object for the requested item id.
         """
-        print(f"Attempting to retrieve layer with item id: {item_id}")
+        print(f" - Attempting to retrieve layer with item id: {item_id}")
         item = gis.content.get(item_id)
 
         if not item:
@@ -69,7 +69,7 @@ def get_gis_item(item_id: str, gis: GIS) -> Item:
             print(item_not_found_message)
             raise Exception(item_not_found_message)
         else:
-            print(f"Successfully got GIS Item ID: {item_id}")
+            print(f" - Successfully got GIS Item ID: {item_id}")
             return item
 
 
@@ -240,7 +240,7 @@ def create_folder_in_ags(gis: str , folder_name: str) -> str:
     folder_list = [i['title'] for i in user_folders]
     if folder_name not in folder_list:
         gis.content.create_folder(folder_name)
-        print(f'{folder_name} was created.')
+        print(f' - {folder_name} was created.')
     elif folder_name in folder_list:
         print(f"The folder: {folder_name} already exists and was not created.")
 
@@ -252,7 +252,7 @@ def delete_folder_in_args(gis: str, folder_name: str) -> str:
     folder_list = [i['title'] for i in user_folders]
     if folder_name in folder_list:
         gis.content.delete_folder(folder_name)
-        print(f'The folder {folder_name} was deleted.')
+        print(f' - The folder {folder_name} was deleted.')
     elif folder_name not in folder_list:
         print(f'The folder {folder_name} does not exist.')
 
