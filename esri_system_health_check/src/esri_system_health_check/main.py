@@ -2,9 +2,9 @@
 import sys
 import time
 import os
-import pandas as pd
 import random
 import requests
+import pandas as pd
 from datetime import date
 from arcgis.gis import GIS
 from cProfile import run
@@ -13,8 +13,9 @@ from arcgis.features import GeoAccessor
 
 def main():
     runner_start_time = time.time()
+    print("##########################################################\n")
     print(" \nStarting the process of checking the status of the Esri System")
-    print(" - Reading details Configuration File")
+    print(" - Reading details Configuration File to run the test")
     
     # 1. Can we connect to the ArcGIS Portal or AGOL 
 
@@ -38,11 +39,10 @@ def main():
     
     layer_title = layer_title + str(random.randint(1,10000))
     sample_item = config.get('ArcGIS Items', 'test_item')
-    print("##########################################################\n")
+    
     ags_server = config.get('Machines', 'server')
     ags_portal = config.get('Machines', 'portal')
-
-    
+    print("##########################################################\n")
 
 
     # 1.Creating the GIS Object to connect to the instance of ArcGIS
@@ -60,7 +60,9 @@ def main():
     
 
     if status == 'ArcGIS Online': 
-        print(f'We are skipping steps 2 and 3 due to the instance being {status}.')
+        
+        print(f'Skipping steps 2 and 3 due to the test being done with {status}.')
+        print("##########################################################\n")
     else:
     
         # 2. Can we connect to ArcGIS Server
@@ -120,22 +122,15 @@ def main():
     print(' - Completed section 7. \n')
     print("##########################################################\n")
 
-    # 8. We need to be able to publish a shapefile as a hosted feature service
-    print(f'8. Testing the ability to publish a shapefile as a hosted feature service')
-    print(' - Here is the first thing we do. ')
-    print(' - Here is the next thing we do. ')
-    print(' - Completed section 8. \n')
-    print("##########################################################\n")
 
-
-    # 9. We need to be able to pull down these files and edit the content and push back our edits
-    print('9. Testing the ability to pull a feature layer into a DataFrame, remove all the content, and add new content.')
+    # 8. We need to be able to pull down these files and edit the content and push back our edits
+    print('8. Testing the ability to pull a feature layer into a DataFrame, remove all the content, and add new content.')
     print(' - Here is the first thing we do. ')
     print(' - Here is the next thing we do. ')
     print(' - Completed section 9. \n')
     print("##########################################################\n")
     
-    print("Completed all necessary steps. ")
+    print("Completed all testing steps complete. ")
 
 # Processing Steps to check the health of the system
 if __name__ == "__main__":
