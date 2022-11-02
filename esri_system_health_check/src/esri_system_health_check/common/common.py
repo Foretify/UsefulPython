@@ -23,7 +23,7 @@ def connect(org_url: str, login_name: str, user_password: str, profile_name: Opt
                                         the identified profile will be used to login to the specified GIS. Defaults to None.
     """
     if profile_name:
-        print(f'Attempting to connect with the credential profile, {profile_name}')
+        print(f' - Attempting to connect with the credential profile, {profile_name}')
         try:
             gis = GIS(profile=profile_name)
             print_profile_info() 
@@ -34,7 +34,7 @@ def connect(org_url: str, login_name: str, user_password: str, profile_name: Opt
             print(e, exc_info=True)
             return None
     else:
-        print('No profile specified menaing no profile was stored on the system.\nAttempting to connect using username and password for ArcGIS:\n')
+        print(' - No profile specified menaing no profile was stored on the system.\n - Attempting to connect using username and password for ArcGIS:\n')
         try:
             gis = GIS(url=org_url, username=login_name, password=user_password)
             print_profile_info(gis)
@@ -61,7 +61,7 @@ def get_gis_item(item_id: str, gis: GIS) -> Item:
         Returns:
             arcgis.gis.Item: Item content object for the requested item id.
         """
-        print(f"Attempting to retrieve layer with item id: {item_id}")
+        print(f" - Attempting to retrieve layer with item id: {item_id}")
         item = gis.content.get(item_id)
 
         if not item:
@@ -69,7 +69,7 @@ def get_gis_item(item_id: str, gis: GIS) -> Item:
             print(item_not_found_message)
             raise Exception(item_not_found_message)
         else:
-            print(f"Successfully got GIS Item ID: {item_id}")
+            print(f" - Successfully got GIS Item ID: {item_id}")
             return item
 
 
@@ -77,7 +77,7 @@ def print_profile_info(gis):
         '''
         Output print statement that displays gis properties
         '''
-        print("Successfully logged into '{}' via the user '{}'".format(
+        print(" - Successfully logged into '{}' via the user '{}'".format(
             gis.properties.portalHostname,
             gis.properties.user.username))
 
@@ -240,7 +240,7 @@ def create_folder_in_ags(gis: str , folder_name: str) -> str:
     folder_list = [i['title'] for i in user_folders]
     if folder_name not in folder_list:
         gis.content.create_folder(folder_name)
-        print(f'{folder_name} was created.')
+        print(f' - {folder_name} was created.')
     elif folder_name in folder_list:
         print(f"The folder: {folder_name} already exists and was not created.")
 
@@ -252,7 +252,7 @@ def delete_folder_in_args(gis: str, folder_name: str) -> str:
     folder_list = [i['title'] for i in user_folders]
     if folder_name in folder_list:
         gis.content.delete_folder(folder_name)
-        print(f'The folder {folder_name} was deleted.')
+        print(f' - The folder {folder_name} was deleted.')
     elif folder_name not in folder_list:
         print(f'The folder {folder_name} does not exist.')
 
