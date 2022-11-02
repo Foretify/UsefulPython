@@ -44,8 +44,6 @@ def main():
     ags_portal = config.get('Machines', 'portal')
     print("##########################################################\n")
 
-    
-
 
     # 1.Creating the GIS Object to connect to the instance of ArcGIS
     print('1. Testing the connection to ArcGIS Enterprise or AGOL ')
@@ -132,7 +130,7 @@ def main():
     print(' - Completed section 9. \n')
     print("##########################################################\n")
     
-    print("Completed all necessary steps. ")
+    print("Completed all testing steps complete. ")
 
 # Processing Steps to check the health of the system
 if __name__ == "__main__":
