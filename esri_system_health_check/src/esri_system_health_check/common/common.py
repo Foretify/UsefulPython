@@ -2,12 +2,14 @@ import os
 import sys
 import logging
 import requests
+import pandas as pd
 from arcgis.gis import GIS, Item
 from typing import Optional, Text
+from arcgis.features import GeoAccessor
 from datetime import datetime, timedelta
 from configparser import ConfigParser, RawConfigParser
-import pandas as pd
-from arcgis.features import GeoAccessor
+
+
 
 
 def connect(org_url: str, login_name: str, user_password: str, profile_name: Optional[str]=None):
