@@ -54,6 +54,7 @@ def main():
     status = gis.properties.portalName
     
     print(f" - Completed connecting to a {status}\n")
+    print(' - Completed section 1. \n')
     print("##########################################################\n")
 
     
@@ -64,11 +65,19 @@ def main():
     
         # 2. Can we connect to ArcGIS Server
         print('2. Can we connect to ArcGIS Server')
+
+        server_status = requests.request(method='GET', url= ags_server)
+        print(f'We are able to connect to the {ags_server} machine with a code of:  {server_status}')
+
+        portal_status = requests.request(method='GET', url= ags_portal)
+        print(f'We are able to connect to the {ags_portal} machine with a code of:  {portal_status}')
+        print(' - Completed section 2. \n')
         
 
         print("##########################################################\n")
         # 3. Can we connect to the web adaptors for portal and server
         print('3. Can we connect to the web adaptors for portal and server')
+        print(' - Completed section 3. \n')
     
 
     # 4. Pull a gis item into a dataframe and create a feature set from this item
@@ -83,7 +92,9 @@ def main():
     sample_df = sample_lyr.query(as_df=True)
     print(' - Querying data from GIS item. ')
     print(f' - Successfully wrote data from GIS item: {itm} into a dataframe. \n')
+    print(' - Completed section 4. \n')
     print("##########################################################\n")
+    
 
 
     # 5. We need to be able to create a folder and delete a folder in the users content
@@ -91,6 +102,7 @@ def main():
     cm.create_folder_in_ags(gis, folder_name)
     print(f' - Successfully created a folder in {status}')
     print(f' - {folder_name} will be deleted in a subsequent test. \n')
+    print(' - Completed section 5. \n')
     print("##########################################################\n")
 
 
@@ -98,19 +110,21 @@ def main():
     print("6. Testing the ability to create a layer in the hosted server from a csv that is stored locally\n")
     cm.create_layer_in_test_folder(gis, csv_path, folder_name, layer_title)
     print(f' - Successfully created a hosted feature layer from a csv in {status}\n')
+    print(' - Completed section 6. \n')
     print("##########################################################\n")
 
     # 7. Cleaning up the test data by deleting the folder created
     print('7. Cleaning up the test data by deleting the folder created in step 5')
     cm.delete_folder_in_args(gis, folder_name)
     print(f' - Successfully deleted the test folder: {folder_name} created in {status}\n')
+    print(' - Completed section 7. \n')
     print("##########################################################\n")
 
     # 8. We need to be able to publish a shapefile as a hosted feature service
     print(f'8. Testing the ability to publish a shapefile as a hosted feature service')
     print(' - Here is the first thing we do. ')
     print(' - Here is the next thing we do. ')
-    print(' - We completed doing the things for section 8. \n')
+    print(' - Completed section 8. \n')
     print("##########################################################\n")
 
 
@@ -118,7 +132,7 @@ def main():
     print('9. Testing the ability to pull a feature layer into a DataFrame, remove all the content, and add new content.')
     print(' - Here is the first thing we do. ')
     print(' - Here is the next thing we do. ')
-    print(' - We completed doing the things for section 9. \n')
+    print(' - Completed section 9. \n')
     print("##########################################################\n")
     
     print("Completed all necessary steps. ")
