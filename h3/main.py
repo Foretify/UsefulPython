@@ -1,4 +1,6 @@
 from common import common as cm
+import warnings
+warnings.filterwarnings('ignore')
 import time
 
 

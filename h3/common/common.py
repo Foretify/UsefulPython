@@ -3,6 +3,8 @@ from shapely.geometry import Polygon, Point
 import shapely.wkt
 import pandas as pd
 import geopandas as gpd
+import warnings
+warnings.filterwarnings('ignore')
 
 def get_hex_grid_info(lat: int, long: int, resolution: int):
     '''
