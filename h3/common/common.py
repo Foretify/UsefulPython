@@ -29,7 +29,7 @@ def get_hex_grid_info(lat: int, long: int, resolution: int):
 # start with a grid coordainte and a number of rings
 def create_hex_grids(lat: int, long: int, resolution: int, number_of_rings:int):
     rings = {}
-    count = 0
+    count = 1
     ring_count = 0
     
     print(f'using the following coordinate {lat}, {long} with a resolution of: {resolution}')
@@ -70,5 +70,14 @@ def create_shapefile(dataframe: str ,filepath: str ,filename: str):
     print("reading the dataframe into the model")
     dataframe = dataframe
     dataframe.to_file(filename= completeName, driver='ESRI Shapefile')
-    print(f"shapefile has been created in the following directory: {filepath}")
+    print(f"shapefile has been created in the following directory: {completeName}")
     
+def create_hex_csv(dataframe: str ,filepath: str ,filename: str):
+
+    completeName = os.path.join(filepath, filename)
+    print(completeName)
+    print("reading the dataframe into the model")
+    dataframe.to_csv(completeName) 
+    print(f"CSV has been created in the following directory: {completeName}")
+
+
