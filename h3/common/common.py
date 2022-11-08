@@ -4,6 +4,7 @@ import shapely.wkt
 import pandas as pd
 import geopandas as gpd
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 def get_hex_grid_info(lat: int, long: int, resolution: int):
@@ -62,3 +63,12 @@ def create_hex_grids(lat: int, long: int, resolution: int, number_of_rings:int):
             
     print(ring_count)
     return final_gpd
+def create_shapefile(dataframe: str ,filepath: str ,filename: str):
+
+    completeName = os.path.join(filepath, filename)
+    print(completeName)
+    print("reading the dataframe into the model")
+    dataframe = dataframe
+    dataframe.to_file(filename= completeName, driver='ESRI Shapefile')
+    print(f"shapefile has been created in the following directory: {filepath}")
+    

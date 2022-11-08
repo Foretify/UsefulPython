@@ -13,6 +13,7 @@ def main():
     hex_grid = cm.create_hex_grids(25.32,55.46,7,3)
     #print(len(hex_grid))
     #print(hex_grid.head()
+    cm.create_shapefile(hex_grid,"C:\Working","final.shp")
     
     
     
