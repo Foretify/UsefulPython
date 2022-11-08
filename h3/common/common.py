@@ -22,9 +22,7 @@ def get_hex_grid_info(lat: int, long: int, resolution: int):
        "long" : h3.h3_to_geo(h3_id)[1], 
        "center_coords" : h3.h3_to_geo(h3_id), 
        "geometry" : Polygon(h3.h3_to_geo_boundary(h3_id, geo_json=True)), 
-        
-        #"parent" : h3.h3_to_parent(h3_id), 
-        #"children" : h3.h3_to_children(h3_id)
+
     }
 # start with a grid coordainte and a number of rings
 def create_hex_grids(lat: int, long: int, resolution: int, number_of_rings:int):
@@ -81,3 +79,26 @@ def create_hex_csv(dataframe: str ,filepath: str ,filename: str):
     print(f"CSV has been created in the following directory: {completeName}")
 
 
+def create_hex_grid(lat:int,lng:int,resloution:int,rings:int):
+    '''
+    Creates a hex grids in a geodataframe from a given location the resloution of the grid 
+    desired and the number of rings from the starting hex grid
+    
+    inputs: 
+    lat = lattitude 
+    lng = longitutde
+    resloution = the scale fo the hex grid
+    rings = number of rings desired from the center hex grid
+    
+    '''
+    center_hex = get_hex_grid_info(lat,lng,resloution)
+    ring = h3.k_ring(center_hex['hash'],rings)
+    hex_output=gpd.GeoDataFrame(center_hex, geometry='geometry', crs ="EPSG:4326")
+    hex_output = hex_output.drop(1)
+    for i in ring:
+        coordinates = h3.h3_to_geo(i)
+        hex = get_hex_grid_info(coordinates[0],coordinates[1],resloution)
+        hex_gdf = gpd.GeoDataFrame(hex, geometry='geometry', crs ="EPSG:4326")
+        hex_gdf = hex_gdf.drop(1)
+        hex_output = hex_output.append(hex_gdf)
+    return hex_output
