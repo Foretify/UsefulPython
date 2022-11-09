@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "h3 grid creation"
+version = "1.0.0"
+description = "A module that allows the creation of hex grids"
+authors = ["Foretify 2022"]
+license = "apache-2.0"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+h3 = "3.7.4"
+shapely = "1.8.5.post1"
+geopandas = "0.12.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
