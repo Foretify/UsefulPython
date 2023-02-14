@@ -4,6 +4,7 @@
 # Import system modules
 import arcpy
 
+
 """ # Set local variables
 out_dataset_path = "C:/output/HabitatAnalysis.gdb" 
 out_name = "analysisresults"
