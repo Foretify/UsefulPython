@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 folder_path = str(Path(__file__).parent)
-geo_database_name = "Titan_IM_.gdb"
+geo_database_name = "Titan_IM_1.gdb"
 geo_database = folder_path + '/' + geo_database_name
 
 
@@ -58,19 +58,21 @@ for key, value in im_dict.items():
     sr = arcpy.SpatialReference(folder_path + "/" + "WGS1984WorldMercator.prj")
 
 
-    if arcpy.Exists(geo_database + "/" + out_name):
-        print(f"The feature data set {out_name} already exists moving on to the next step")
+    if arcpy.Exists(geo_database + "/" + feature_set_name):
+        print(f"The feature data set {feature_set_name} already exists moving on to the next step")
     else: 
-        print(f'Creating the feature set:  {out_name}')
+        print(f'Creating the feature set:  {feature_set_name}')
         
         # Execute Create Feature dataset 
-        arcpy.CreateFeatureDataset_management(geo_database, out_name, sr)
-    if arcpy.Exists(folder_path + "/" + geo_database_name +"/" + out_name + "/" + feature_service_name):
+        arcpy.CreateFeatureDataset_management(geo_database, feature_set_name, sr)
+    if arcpy.Exists(folder_path + "/" + geo_database_name +"/" + feature_set_name + "/" + feature_service_name):
         print(f"The feature class {feature_service_name} already exists moving on to the next step")
     else: 
         print(f'Creating the feature class: {feature_service_name}')
 
-        arcpy.management.CreateFeatureclass(folder_path + "/" + geo_database_name +"/" + out_name, feature_service_name,geom_type,"","","","","","","","",feature_service_alias) 
+        arcpy.management.CreateFeatureclass(folder_path + "/" + geo_database_name +"/" + feature_set_name, feature_service_name,geom_type,"","","","","","","","",feature_service_alias)
+        #arcpy.AddField_management(OutputFC,"TitanID","TEXT") 
+
 print(f'Finished creating the geodata base information model')
 
 
