@@ -1,11 +1,11 @@
+import os
 import arcpy
-import os
-import os
-import configparser
+from arcpy import env
 from pathlib import Path
 
+
 folder_path = str(Path(__file__).parent)
-geo_database_name = "fGDB.gdb"
+geo_database_name = "Titan_IM_.gdb"
 geo_database = folder_path + '/' + geo_database_name
 
 
@@ -15,10 +15,11 @@ else:
     print('Creating the geo database')
     arcpy.CreateFileGDB_management(folder_path, geo_database_name)
 
-im_dict = { 'hpt_targets'   : ['targets',"POINT","HPT"],
+im_dict = { 'hpt_targets1'   : ['targets',"POINT","HPT"],
             'hvt_targets'   : ['targets',"POINT","HVT"],
             'known_entity'   : ['entity',"POINT","Known"],
             'unknown_entity'   : ['entity',"POINT","Unknown"],
+            'units_template'   : ['template',"POINT","Templated Units"],
             'point_gmti'   : ['gmti',"POINT","Point"],
             'track_gmti'   : ['gmti',"POINT","Track"],
             'to_gmti'   : ['gmti',"POLYGON","Tessellated Overlay"],
@@ -37,6 +38,9 @@ im_dict = { 'hpt_targets'   : ['targets',"POINT","HPT"],
             'lines_intel_graphics'   : ['intel_graphics',"POLYLINE","Lines"],
             'polygons_intel_graphics'   : ['intel_graphics',"POLYGON","Polygons"],
             'spot_reports'   : ['reports',"POINT","BDA Line"],
+            'sensor_track'   : ['fmv',"POINT","Sensor Track"],
+            'sensor_footprint'   : ['fmv',"POLYLINE","Sensor Footprint"],
+            
 
 }
 for key, value in im_dict.items():
@@ -55,11 +59,19 @@ for key, value in im_dict.items():
 
 
     if arcpy.Exists(geo_database + "/" + out_name):
-        print("The featureset already exists moving on to the next step")
+        print(f"The feature data set {out_name} already exists moving on to the next step")
     else: 
-        print('Creating the feature set')
+        print(f'Creating the feature set:  {out_name}')
         
         # Execute Create Feature dataset 
         arcpy.CreateFeatureDataset_management(geo_database, out_name, sr)
+    if arcpy.Exists(folder_path + "/" + geo_database_name +"/" + out_name + "/" + feature_service_name):
+        print(f"The feature class {feature_service_name} already exists moving on to the next step")
+    else: 
+        print(f'Creating the feature class: {feature_service_name}')
 
-    arcpy.management.CreateFeatureclass(folder_path + "/" + geo_database_name +"/" + out_name, feature_service_name,geom_type,"","","","","","","","",feature_service_alias) 
+        arcpy.management.CreateFeatureclass(folder_path + "/" + geo_database_name +"/" + out_name, feature_service_name,geom_type,"","","","","","","","",feature_service_alias) 
+print(f'Finished creating the geodata base information model')
+
+
+
