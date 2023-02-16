@@ -7,7 +7,7 @@ import time
 def main():
     runner_start_time = time.time()
     
-    hex_dictionary = cm.get_hex_grid_info(34.82,-116.46,7)
+    hex_dictionary = cm.get_hex_grid_info(34.82,-116.46,15)
     print(hex_dictionary)
     print("##########################################################\n")
     
