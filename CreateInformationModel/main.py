@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 folder_path = str(Path(__file__).parent)
-geo_database_name = "Titan_IM_1.gdb"
+geo_database_name = "Titan_IM.gdb"
 geo_database = folder_path + '/' + geo_database_name
 
 
@@ -73,7 +73,7 @@ for key, value in im_dict.items():
         arcpy.management.CreateFeatureclass(folder_path + "/" + geo_database_name +"/" + feature_set_name, feature_service_name,geom_type,"","","","","","","","",feature_service_alias)
         #arcpy.AddField_management(OutputFC,"TitanID","TEXT") 
 
-print(f'Finished creating the geodata base information model')
+print(f'Finished creating the titan base information model')
 
 
 
