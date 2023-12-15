@@ -70,5 +70,5 @@ def get_gis_item(item_id: str, gis: GIS):
         print(item_not_found_message)
         raise Exception(item_not_found_message)
     else:
-        print(f"Successfully got GIS Item ID: {item_id}")
+        print(f"Successfully retrived GIS Item ID: {item_id}")
         return item
