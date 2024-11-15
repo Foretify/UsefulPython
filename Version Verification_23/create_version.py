@@ -12,6 +12,7 @@ def create_requirements_file():
         f.write(f"# Requirements file created on: {timestamp}\n\n")
         # Capture installed packages and versions
         subprocess.run(["pip", "freeze"], stdout=f)
+        
 
 if __name__ == "__main__":
     create_requirements_file()
