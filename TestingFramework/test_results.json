@@ -1,5 +1,5 @@
 {
-  "export_timestamp": "2025-11-17T09:44:11.604025",
+  "export_timestamp": "2025-11-17T13:55:59.884194",
   "tests": {
     "fast_test": {
       "statistics": {
@@ -8,19 +8,19 @@
         "successful_runs": 10,
         "failed_runs": 0,
         "success_rate": 100.0,
-        "avg_execution_time": 0.010439180000685156,
-        "min_execution_time": 0.010146799962967634,
-        "max_execution_time": 0.010884999996051192,
-        "std_dev_execution_time": 0.0002041844129099266,
-        "total_execution_time": 0.10439180000685155
+        "avg_execution_time": 0.010572360001970083,
+        "min_execution_time": 0.010315600025933236,
+        "max_execution_time": 0.010794100002385676,
+        "std_dev_execution_time": 0.00013249363342805466,
+        "total_execution_time": 0.10572360001970083
       },
       "results": [
         {
           "test_name": "fast_test",
           "run_number": 1,
           "success": true,
-          "execution_time": 0.010337600018829107,
-          "timestamp": "2025-11-17T09:44:11.034810",
+          "execution_time": 0.010580500005744398,
+          "timestamp": "2025-11-17T13:55:59.431905",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -28,8 +28,8 @@
           "test_name": "fast_test",
           "run_number": 2,
           "success": true,
-          "execution_time": 0.010146799962967634,
-          "timestamp": "2025-11-17T09:44:11.045277",
+          "execution_time": 0.010315600025933236,
+          "timestamp": "2025-11-17T13:55:59.442256",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -37,8 +37,8 @@
           "test_name": "fast_test",
           "run_number": 3,
           "success": true,
-          "execution_time": 0.010424199979752302,
-          "timestamp": "2025-11-17T09:44:11.055614",
+          "execution_time": 0.010794100002385676,
+          "timestamp": "2025-11-17T13:55:59.453149",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -46,8 +46,8 @@
           "test_name": "fast_test",
           "run_number": 4,
           "success": true,
-          "execution_time": 0.010599100030958652,
-          "timestamp": "2025-11-17T09:44:11.066148",
+          "execution_time": 0.010507899976801127,
+          "timestamp": "2025-11-17T13:55:59.463753",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -55,8 +55,8 @@
           "test_name": "fast_test",
           "run_number": 5,
           "success": true,
-          "execution_time": 0.010333399986848235,
-          "timestamp": "2025-11-17T09:44:11.076564",
+          "execution_time": 0.01062920002732426,
+          "timestamp": "2025-11-17T13:55:59.474336",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -64,8 +64,8 @@
           "test_name": "fast_test",
           "run_number": 6,
           "success": true,
-          "execution_time": 0.010354000027291477,
-          "timestamp": "2025-11-17T09:44:11.086888",
+          "execution_time": 0.010438199969939888,
+          "timestamp": "2025-11-17T13:55:59.484775",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -73,8 +73,8 @@
           "test_name": "fast_test",
           "run_number": 7,
           "success": true,
-          "execution_time": 0.01036820001900196,
-          "timestamp": "2025-11-17T09:44:11.097177",
+          "execution_time": 0.010555599990766495,
+          "timestamp": "2025-11-17T13:55:59.495491",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -82,8 +82,8 @@
           "test_name": "fast_test",
           "run_number": 8,
           "success": true,
-          "execution_time": 0.010350800002925098,
-          "timestamp": "2025-11-17T09:44:11.107727",
+          "execution_time": 0.010693599993828684,
+          "timestamp": "2025-11-17T13:55:59.506026",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -91,8 +91,8 @@
           "test_name": "fast_test",
           "run_number": 9,
           "success": true,
-          "execution_time": 0.010592699982225895,
-          "timestamp": "2025-11-17T09:44:11.118262",
+          "execution_time": 0.010590200021397322,
+          "timestamp": "2025-11-17T13:55:59.516671",
           "return_value": "Fast test completed",
           "error": null
         },
@@ -100,8 +100,8 @@
           "test_name": "fast_test",
           "run_number": 10,
           "success": true,
-          "execution_time": 0.010884999996051192,
-          "timestamp": "2025-11-17T09:44:11.129105",
+          "execution_time": 0.01061870000557974,
+          "timestamp": "2025-11-17T13:55:59.527364",
           "return_value": "Fast test completed",
           "error": null
         }
@@ -114,19 +114,19 @@
         "successful_runs": 3,
         "failed_runs": 0,
         "success_rate": 100.0,
-        "avg_execution_time": 0.10060853332591553,
-        "min_execution_time": 0.10056389996316284,
-        "max_execution_time": 0.10067790001630783,
-        "std_dev_execution_time": 6.089175766358739e-05,
-        "total_execution_time": 0.3018255999777466
+        "avg_execution_time": 0.10062283335719258,
+        "min_execution_time": 0.1005894000409171,
+        "max_execution_time": 0.10067030001664534,
+        "std_dev_execution_time": 4.223627065398019e-05,
+        "total_execution_time": 0.30186850007157773
       },
       "results": [
         {
           "test_name": "slow_test",
           "run_number": 1,
           "success": true,
-          "execution_time": 0.10056389996316284,
-          "timestamp": "2025-11-17T09:44:11.230517",
+          "execution_time": 0.10067030001664534,
+          "timestamp": "2025-11-17T13:55:59.628407",
           "return_value": "Slow test completed",
           "error": null
         },
@@ -134,8 +134,8 @@
           "test_name": "slow_test",
           "run_number": 2,
           "success": true,
-          "execution_time": 0.10058379999827594,
-          "timestamp": "2025-11-17T09:44:11.331050",
+          "execution_time": 0.1005894000409171,
+          "timestamp": "2025-11-17T13:55:59.729138",
           "return_value": "Slow test completed",
           "error": null
         },
@@ -143,8 +143,8 @@
           "test_name": "slow_test",
           "run_number": 3,
           "success": true,
-          "execution_time": 0.10067790001630783,
-          "timestamp": "2025-11-17T09:44:11.431829",
+          "execution_time": 0.10060880001401529,
+          "timestamp": "2025-11-17T13:55:59.829610",
           "return_value": "Slow test completed",
           "error": null
         }
@@ -153,23 +153,23 @@
     "variable_test": {
       "statistics": {
         "test_name": "variable_test",
-        "total_runs": 5,
-        "successful_runs": 5,
+        "total_runs": 2,
+        "successful_runs": 2,
         "failed_runs": 0,
         "success_rate": 100.0,
-        "avg_execution_time": 0.032692939986009154,
-        "min_execution_time": 0.015169600024819374,
-        "max_execution_time": 0.04533229995286092,
-        "std_dev_execution_time": 0.011562457174177488,
-        "total_execution_time": 0.16346469993004575
+        "avg_execution_time": 0.023395299998810515,
+        "min_execution_time": 0.013584600004833192,
+        "max_execution_time": 0.03320599999278784,
+        "std_dev_execution_time": 0.013874424987856373,
+        "total_execution_time": 0.04679059999762103
       },
       "results": [
         {
           "test_name": "variable_test",
           "run_number": 1,
           "success": true,
-          "execution_time": 0.039399700006470084,
-          "timestamp": "2025-11-17T09:44:11.471677",
+          "execution_time": 0.03320599999278784,
+          "timestamp": "2025-11-17T13:55:59.863545",
           "return_value": "Variable test completed",
           "error": null
         },
@@ -177,35 +177,8 @@
           "test_name": "variable_test",
           "run_number": 2,
           "success": true,
-          "execution_time": 0.035044899967033416,
-          "timestamp": "2025-11-17T09:44:11.506833",
-          "return_value": "Variable test completed",
-          "error": null
-        },
-        {
-          "test_name": "variable_test",
-          "run_number": 3,
-          "success": true,
-          "execution_time": 0.015169600024819374,
-          "timestamp": "2025-11-17T09:44:11.522032",
-          "return_value": "Variable test completed",
-          "error": null
-        },
-        {
-          "test_name": "variable_test",
-          "run_number": 4,
-          "success": true,
-          "execution_time": 0.028518199978861958,
-          "timestamp": "2025-11-17T09:44:11.550531",
-          "return_value": "Variable test completed",
-          "error": null
-        },
-        {
-          "test_name": "variable_test",
-          "run_number": 5,
-          "success": true,
-          "execution_time": 0.04533229995286092,
-          "timestamp": "2025-11-17T09:44:11.595861",
+          "execution_time": 0.013584600004833192,
+          "timestamp": "2025-11-17T13:55:59.877180",
           "return_value": "Variable test completed",
           "error": null
         }
@@ -218,19 +191,19 @@
         "successful_runs": 18,
         "failed_runs": 2,
         "success_rate": 90.0,
-        "avg_execution_time": 0.00013991999730933458,
-        "min_execution_time": 3.91000066883862e-05,
-        "max_execution_time": 0.0007037000032141805,
-        "std_dev_execution_time": 0.00014215619947426043,
-        "total_execution_time": 0.0027983999461866915
+        "avg_execution_time": 0.0001302149990806356,
+        "min_execution_time": 5.540001438930631e-05,
+        "max_execution_time": 0.0007198000093922019,
+        "std_dev_execution_time": 0.00014751530402033611,
+        "total_execution_time": 0.002604299981612712
       },
       "results": [
         {
           "test_name": "failing_test",
           "run_number": 1,
           "success": true,
-          "execution_time": 0.00018909998470917344,
-          "timestamp": "2025-11-17T09:44:11.595861",
+          "execution_time": 5.540001438930631e-05,
+          "timestamp": "2025-11-17T13:55:59.877180",
           "return_value": "Test passed",
           "error": null
         },
@@ -238,8 +211,8 @@
           "test_name": "failing_test",
           "run_number": 2,
           "success": true,
-          "execution_time": 0.00014030002057552338,
-          "timestamp": "2025-11-17T09:44:11.597028",
+          "execution_time": 0.00014159997226670384,
+          "timestamp": "2025-11-17T13:55:59.877180",
           "return_value": "Test passed",
           "error": null
         },
@@ -247,8 +220,8 @@
           "test_name": "failing_test",
           "run_number": 3,
           "success": true,
-          "execution_time": 0.00014000001829117537,
-          "timestamp": "2025-11-17T09:44:11.597028",
+          "execution_time": 9.330001194030046e-05,
+          "timestamp": "2025-11-17T13:55:59.878194",
           "return_value": "Test passed",
           "error": null
         },
@@ -256,8 +229,8 @@
           "test_name": "failing_test",
           "run_number": 4,
           "success": true,
-          "execution_time": 0.0001316999550908804,
-          "timestamp": "2025-11-17T09:44:11.597028",
+          "execution_time": 0.00011190003715455532,
+          "timestamp": "2025-11-17T13:55:59.878194",
           "return_value": "Test passed",
           "error": null
         },
@@ -265,26 +238,26 @@
           "test_name": "failing_test",
           "run_number": 5,
           "success": true,
-          "execution_time": 0.00012610002886503935,
-          "timestamp": "2025-11-17T09:44:11.597028",
+          "execution_time": 9.90999978967011e-05,
+          "timestamp": "2025-11-17T13:55:59.878194",
           "return_value": "Test passed",
           "error": null
         },
         {
           "test_name": "failing_test",
           "run_number": 6,
-          "success": true,
-          "execution_time": 0.00013100000796839595,
-          "timestamp": "2025-11-17T09:44:11.597028",
-          "return_value": "Test passed",
-          "error": null
+          "success": false,
+          "execution_time": 0.0007198000093922019,
+          "timestamp": "2025-11-17T13:55:59.878194",
+          "return_value": null,
+          "error": "ValueError: Random failure occurred\nTraceback (most recent call last):\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 188, in run_test\n    return_value = test_func()\n                   ^^^^^^^^^^^\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 411, in example_failing_test\n    raise ValueError(\"Random failure occurred\")\nValueError: Random failure occurred\n"
         },
         {
           "test_name": "failing_test",
           "run_number": 7,
           "success": true,
-          "execution_time": 0.0001183999702334404,
-          "timestamp": "2025-11-17T09:44:11.597028",
+          "execution_time": 0.00010949996067211032,
+          "timestamp": "2025-11-17T13:55:59.879194",
           "return_value": "Test passed",
           "error": null
         },
@@ -292,8 +265,8 @@
           "test_name": "failing_test",
           "run_number": 8,
           "success": true,
-          "execution_time": 0.00012879999121651053,
-          "timestamp": "2025-11-17T09:44:11.597028",
+          "execution_time": 0.00014780001947656274,
+          "timestamp": "2025-11-17T13:55:59.879194",
           "return_value": "Test passed",
           "error": null
         },
@@ -301,26 +274,26 @@
           "test_name": "failing_test",
           "run_number": 9,
           "success": true,
-          "execution_time": 0.00013870000839233398,
-          "timestamp": "2025-11-17T09:44:11.598025",
+          "execution_time": 0.0001403999631293118,
+          "timestamp": "2025-11-17T13:55:59.879194",
           "return_value": "Test passed",
           "error": null
         },
         {
           "test_name": "failing_test",
           "run_number": 10,
-          "success": true,
-          "execution_time": 0.00011329998960718513,
-          "timestamp": "2025-11-17T09:44:11.598025",
-          "return_value": "Test passed",
-          "error": null
+          "success": false,
+          "execution_time": 0.00027540000155568123,
+          "timestamp": "2025-11-17T13:55:59.879194",
+          "return_value": null,
+          "error": "ValueError: Random failure occurred\nTraceback (most recent call last):\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 188, in run_test\n    return_value = test_func()\n                   ^^^^^^^^^^^\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 411, in example_failing_test\n    raise ValueError(\"Random failure occurred\")\nValueError: Random failure occurred\n"
         },
         {
           "test_name": "failing_test",
           "run_number": 11,
           "success": true,
-          "execution_time": 9.119999594986439e-05,
-          "timestamp": "2025-11-17T09:44:11.598025",
+          "execution_time": 8.569995407015085e-05,
+          "timestamp": "2025-11-17T13:55:59.879194",
           "return_value": "Test passed",
           "error": null
         },
@@ -328,8 +301,8 @@
           "test_name": "failing_test",
           "run_number": 12,
           "success": true,
-          "execution_time": 9.519996820017695e-05,
-          "timestamp": "2025-11-17T09:44:11.598025",
+          "execution_time": 7.33000342734158e-05,
+          "timestamp": "2025-11-17T13:55:59.879194",
           "return_value": "Test passed",
           "error": null
         },
@@ -337,8 +310,8 @@
           "test_name": "failing_test",
           "run_number": 13,
           "success": true,
-          "execution_time": 8.79999715834856e-05,
-          "timestamp": "2025-11-17T09:44:11.598025",
+          "execution_time": 7.720000576227903e-05,
+          "timestamp": "2025-11-17T13:55:59.879194",
           "return_value": "Test passed",
           "error": null
         },
@@ -346,44 +319,44 @@
           "test_name": "failing_test",
           "run_number": 14,
           "success": true,
-          "execution_time": 3.91000066883862e-05,
-          "timestamp": "2025-11-17T09:44:11.598025",
+          "execution_time": 7.360003655776381e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
           "return_value": "Test passed",
           "error": null
         },
         {
           "test_name": "failing_test",
           "run_number": 15,
-          "success": false,
-          "execution_time": 0.0007037000032141805,
-          "timestamp": "2025-11-17T09:44:11.599024",
-          "return_value": null,
-          "error": "ValueError: Random failure occurred\nTraceback (most recent call last):\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 160, in run_test\n    return_value = test_func()\n                   ^^^^^^^^^^^\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 383, in example_failing_test\n    raise ValueError(\"Random failure occurred\")\nValueError: Random failure occurred\n"
+          "success": true,
+          "execution_time": 7.389998063445091e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
+          "return_value": "Test passed",
+          "error": null
         },
         {
           "test_name": "failing_test",
           "run_number": 16,
           "success": true,
-          "execution_time": 3.9300008211284876e-05,
-          "timestamp": "2025-11-17T09:44:11.599024",
+          "execution_time": 6.900000153109431e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
           "return_value": "Test passed",
           "error": null
         },
         {
           "test_name": "failing_test",
           "run_number": 17,
-          "success": false,
-          "execution_time": 0.00023750000400468707,
-          "timestamp": "2025-11-17T09:44:11.599024",
-          "return_value": null,
-          "error": "ValueError: Random failure occurred\nTraceback (most recent call last):\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 160, in run_test\n    return_value = test_func()\n                   ^^^^^^^^^^^\n  File \"C:\\Users\\topow\\Documents\\GitHub\\UsefulPython\\TestingFramework\\testing_genie.py\", line 383, in example_failing_test\n    raise ValueError(\"Random failure occurred\")\nValueError: Random failure occurred\n"
+          "success": true,
+          "execution_time": 6.779999239370227e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
+          "return_value": "Test passed",
+          "error": null
         },
         {
           "test_name": "failing_test",
           "run_number": 18,
           "success": true,
-          "execution_time": 3.91000066883862e-05,
-          "timestamp": "2025-11-17T09:44:11.599024",
+          "execution_time": 6.170000415295362e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
           "return_value": "Test passed",
           "error": null
         },
@@ -391,8 +364,8 @@
           "test_name": "failing_test",
           "run_number": 19,
           "success": true,
-          "execution_time": 6.469996878877282e-05,
-          "timestamp": "2025-11-17T09:44:11.599024",
+          "execution_time": 6.280001252889633e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
           "return_value": "Test passed",
           "error": null
         },
@@ -400,8 +373,8 @@
           "test_name": "failing_test",
           "run_number": 20,
           "success": true,
-          "execution_time": 4.320003790780902e-05,
-          "timestamp": "2025-11-17T09:44:11.599024",
+          "execution_time": 6.509997183457017e-05,
+          "timestamp": "2025-11-17T13:55:59.880195",
           "return_value": "Test passed",
           "error": null
         }

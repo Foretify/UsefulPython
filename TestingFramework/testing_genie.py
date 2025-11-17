@@ -71,15 +71,43 @@ class TestingGenie:
         Initialize the Testing Genie framework
         
         Args:
-            config_file: Path to the configuration INI file
+            config_file: Path to the configuration INI file (absolute or relative to this script)
         """
-        self.config_file = config_file
+        self.config_file = self._resolve_config_path(config_file)
         self.config = configparser.ConfigParser()
         self.tests: Dict[str, Callable] = {}
         self.results: Dict[str, List[TestResult]] = {}
         self.default_runs = 1
         
         self._load_config()
+    
+    def _resolve_config_path(self, config_file: str) -> str:
+        """
+        Resolve the config file path, checking multiple locations
+        
+        Args:
+            config_file: Config file name or path
+            
+        Returns:
+            Resolved path to config file
+        """
+        # If it's an absolute path, use it as-is
+        config_path = Path(config_file)
+        if config_path.is_absolute() and config_path.exists():
+            return str(config_path)
+        
+        # Try current working directory
+        if config_path.exists():
+            return str(config_path)
+        
+        # Try relative to this script's directory
+        script_dir = Path(__file__).parent
+        script_relative = script_dir / config_file
+        if script_relative.exists():
+            return str(script_relative)
+        
+        # Return original path (will trigger warning in _load_config)
+        return config_file
     
     def _load_config(self):
         """Load configuration from the INI file"""
